@@ -1,16 +1,21 @@
 public class sieveOfEratosthenes {
     public static void main(String[] args) {
+       
+        // asks for upper bound
         System.out.print("Enter the upper bound: ");
         int upperBound = In.getInt();
 
+        // is it a prime?
         boolean[] isPrime = new boolean[upperBound + 1];
-        findPrime(isPrime);
+        findPrime(isPrime); // ! connected to boolean
 
-        System.out.println("Prime numbers up to " + upperBound + ":");
+        // output
+        System.out.println("\nPrime numbers up to " + upperBound + ":\n");
         printPrimes(isPrime);
     }
 
-    private static void findPrime(boolean[] isPrime) {
+    // finds prime
+    public static void findPrime(boolean[] isPrime) {
         int n = isPrime.length;
 
         // Assume all numbers are prime initially
@@ -28,7 +33,8 @@ public class sieveOfEratosthenes {
         }
     }
 
-    private static void printPrimes(boolean[] isPrime) {
+    /*prints out prime numbers in an order for 8 lines*/
+    public static void printPrimes(boolean[] isPrime) {
         int count = 0;
         for (int i = 2; i < isPrime.length; i++) {
             if (isPrime[i]) {
