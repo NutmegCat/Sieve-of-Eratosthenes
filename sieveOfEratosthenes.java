@@ -1,8 +1,10 @@
 public class sieveOfEratosthenes {
     public static void main(String[] args) {
        
+        // start boolean
         boolean start = true;
 
+        // while loop
         while (start) {
             System.out.println("\n\nWould you like to start (y/n) ?");
             char startChar = In.getChar();
