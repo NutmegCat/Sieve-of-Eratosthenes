@@ -18,12 +18,12 @@ public class sieveOfEratosthenes {
     public static void findPrime(boolean[] isPrime) {
         int n = isPrime.length;
 
-        // Assume all numbers are prime initially
+        // assume all numbers are prime initially
         for (int i = 2; i < n; i++) {
             isPrime[i] = true;
         }
 
-        // Sieve out the non-prime numbers
+        // sieve out the non-prime numbers
         for (int p = 2; p * p < n; p++) {
             if (isPrime[p]) {
                 for (int i = p * p; i < n; i += p) {
