@@ -14,6 +14,14 @@ public class sieveOfEratosthenes {
                 System.out.print("\nEnter the upper bound: ");
                 int upperBound = In.getInt();
 
+                // if less than 0 
+                if (upperBound < 0) {
+                    System.out.println("\nInvalid value");
+                    continue;                    
+                } else {
+                    ;
+                }
+
                 // is it a prime?
                 boolean[] isPrime = new boolean[upperBound + 1];
                 findPrime(isPrime); // ! connected to boolean
