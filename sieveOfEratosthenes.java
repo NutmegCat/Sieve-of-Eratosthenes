@@ -47,7 +47,7 @@ public class sieveOfEratosthenes {
         }
     }
 
-    /*prints out prime numbers in an order for 8 lines*/
+    //prints out prime numbers in an order for 8 lines
     public static void printPrimes(boolean[] isPrime) {
         int count = 0;
         for (int i = 2; i < isPrime.length; i++) {
