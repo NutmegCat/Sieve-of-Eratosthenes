@@ -1,17 +1,31 @@
 public class sieveOfEratosthenes {
     public static void main(String[] args) {
        
-        // asks for upper bound
-        System.out.print("Enter the upper bound: ");
-        int upperBound = In.getInt();
+        // start boolean
+        boolean start = true;
 
-        // is it a prime?
-        boolean[] isPrime = new boolean[upperBound + 1];
-        findPrime(isPrime); // ! connected to boolean
+        // while loop
+        while (start) {
+            System.out.println("\n\nWould you like to start (y/n) ?");
+            char startChar = In.getChar();
 
-        // output
-        System.out.println("\nPrime numbers up to " + upperBound + ":\n");
-        printPrimes(isPrime);
+            if (startChar == 'y') {
+                // asks for upper bound
+                System.out.print("\nEnter the upper bound: ");
+                int upperBound = In.getInt();
+
+                // is it a prime?
+                boolean[] isPrime = new boolean[upperBound + 1];
+                findPrime(isPrime); // ! connected to boolean
+
+                // output
+                System.out.println("\nPrime numbers up to " + upperBound + ":\n");
+                printPrimes(isPrime);
+            } else {
+                System.out.println("\nExiting...\n");
+                start = false;
+            }
+        }
     }
 
     // finds prime
