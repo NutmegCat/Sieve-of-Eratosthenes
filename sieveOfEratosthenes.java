@@ -1,4 +1,6 @@
-public class sieveOfEratosthenes {
+// Aaron Prince Anu
+
+public class sieveOfEratosthenes { 
     public static void main(String[] args) {
        
         // start boolean
